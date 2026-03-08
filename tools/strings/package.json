@@ -1,0 +1,13 @@
+{
+  "name": "mclce-stringtable-compiler",
+  "version": "1.0.0",
+  "description": "amazing tool",
+  "main": "index.js",
+  "bin": { "stringtable": "./index.js" },
+  "scripts": {
+    "example": "node index.js example"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10"
+  }
+}
