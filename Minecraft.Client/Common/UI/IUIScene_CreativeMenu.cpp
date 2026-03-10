@@ -478,6 +478,17 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM(Item::hoe_diamond_Id)
 
 		ITEM(Item::fireball_Id)
+
+		ITEM(Item::rubyHelmet_Id)
+		ITEM(Item::rubyChestplate_Id)
+		ITEM(Item::rubyLeggings_Id)
+		ITEM(Item::rubyBoots_Id)
+		ITEM(Item::rubySword_Id)
+		// later
+		/*ITEM(Item::rubyShovel_Id)
+		ITEM(Item::rubyPickaxe_Id)
+		ITEM(Item::rubyAxe_Id)*/
+
 		ITEM(Item::clock_Id)
 		ITEM(Item::shears_Id)
 		ITEM(Item::fishingRod_Id)
@@ -486,6 +497,8 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM(Item::horseArmorDiamond_Id)
 		ITEM(Item::horseArmorGold_Id)
 		ITEM(Item::horseArmorMetal_Id)
+
+		
 
 		for(unsigned int i = 0; i < Enchantment::enchantments.length; ++i)
 		{
@@ -510,6 +523,7 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM_AUX(Item::coal_Id,1)
 		ITEM(Item::diamond_Id)
 		ITEM(Item::emerald_Id)
+		ITEM(Item::ruby_Id)
 		ITEM(Item::ironIngot_Id)
 		ITEM(Item::goldIngot_Id)
 		ITEM(Item::netherQuartz_Id)

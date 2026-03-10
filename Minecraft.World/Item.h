@@ -90,6 +90,7 @@ public:
 		eMaterial_book,
 		eMaterial_bookshelf,
 		eMaterial_wheat,
+		eMaterial_ruby,
 
 	}
 	eMaterial;
@@ -158,6 +159,7 @@ public:
 		static const Tier *IRON; //
 		static const Tier *DIAMOND; //
 		static const Tier *GOLD;
+		static const Tier* RUBY;
 
 	private:
 		const int level;
@@ -417,6 +419,18 @@ public:
 	static Item* mutton_raw;
 	static Item* mutton_cooked;
 
+	static Item* ruby;
+
+	static Item* rubySword;
+	static Item* rubyShovel;
+	static Item* rubyPickaxe;
+	static Item* rubyAxe;
+
+	static Item* rubyHelmet;
+	static Item* rubyChestplate;
+	static Item* rubyLeggings;
+	static Item* rubyBoots;
+
 	static const int shovel_iron_Id			= 256;
 	static const int pickAxe_iron_Id		= 257;
 	static const int hatchet_iron_Id		= 258;
@@ -627,6 +641,19 @@ public:
 	//static const int myItem_Id = 1925;
 	static const int raw_mutton_Id = 1925;
 	static const int cooked_mutton_Id = 1926;
+
+	/* Ruby Items */
+	static const int ruby_Id = 1927;
+
+	static const int rubySword_Id = 2000;
+	static const int rubyShovel_Id = 2001;
+	static const int rubyPickaxe_Id = 2002;
+	static const int rubyAxe_Id = 2003;
+
+	static const int rubyHelmet_Id = 2004;
+	static const int rubyChestplate_Id = 2005;
+	static const int rubyLeggings_Id = 2006;
+	static const int rubyBoots_Id = 2007;
 
 public:
 	const int id;

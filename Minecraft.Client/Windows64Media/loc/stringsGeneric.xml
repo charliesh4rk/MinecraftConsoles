@@ -8812,6 +8812,8 @@ All Ender Chests in a world are linked. Items placed into an Ender Chest are acc
 		<value>Cure</value>
 	</data>
 
+	<!-- Mutton -->
+	
 	<data name="IDS_ITEM_MUTTON_RAW">
 		<value>Raw Mutton</value>
 	</data>
@@ -8819,12 +8821,72 @@ All Ender Chests in a world are linked. Items placed into an Ender Chest are acc
 	<data name="IDS_ITEM_MUTTON_COOKED">
 		<value>Cooked Mutton</value>
 	</data>
-
+	
 	<data name="IDS_DESC_MUTTON_RAW">
 		<value>Restores 1.5{*ICON_SHANK_01*}, or can be cooked in a furnace. Obtained by slaying a Sheep.</value>
 	</data>
 
 	<data name="IDS_DESC_MUTTON_COOKED">
 		<value>Restores 4{*ICON_SHANK_01*}. Created by cooking a raw mutton in a furnace.</value>
+	</data>
+	
+	<!-- Ruby -->
+
+	<data name="IDS_ITEM_RUBY">
+		<value>Ruby</value>
+	</data>
+
+	<data name="IDS_DESC_RUBY">
+		<value>Use these to create even stronger weapons, tools, and armor.</value>
+	</data>
+
+	<data name="IDS_ITEM_RUBY_SWORD">
+		<value>Ruby Sword</value>
+	</data>
+
+	<data name="IDS_ITEM_RUBY_SHOVEL">
+		<value>Ruby Shovel</value>
+	</data>
+
+	<data name="IDS_ITEM_RUBY_PICKAXE">
+		<value>Ruby Pickaxe</value>
+	</data>
+
+	<data name="IDS_ITEM_RUBY_AXE">
+		<value>Ruby Axe</value>
+	</data>
+
+	<!-- Ruby Armor -->
+	
+	<data name="IDS_ITEM_RUBY_HELMET">
+		<value>Ruby Helmet</value>
+	</data>
+
+	<data name="IDS_DESC_RUBY_HELMET">
+		<value></value>
+	</data>
+
+	<data name="IDS_ITEM_RUBY_CHESTPLATE">
+		<value>Ruby Chestplate</value>
+	</data>
+
+	<data name="IDS_DESC_RUBY_CHESTPLATE">
+		<value></value>
+	</data>
+
+	<data name="IDS_ITEM_RUBY_LEGGINGS">
+		<value>Ruby Leggings</value>
+	</data>
+
+	<data name="IDS_DESC_RUBY_LEGGINGS">
+		<value></value>
+	</data>
+
+	<data name="IDS_ITEM_RUBY_BOOTS">
+		<value>Ruby Boots</value>
+	</data>
+
+	<data name="IDS_DESC_RUBY_BOOTS">
+		<value></value>
 	</data>
 </root>

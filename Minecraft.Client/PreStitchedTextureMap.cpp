@@ -587,6 +587,11 @@ void PreStitchedTextureMap::loadUVs()
 
 		ADD_ICON(13, 9, L"muttonRaw")
 		ADD_ICON(13, 10, L"muttonCooked")
+		
+		ADD_ICON(11, 5, L"helmetRuby")
+		ADD_ICON(12, 5, L"chestplateRuby")
+		ADD_ICON(13, 5, L"leggingsRuby")
+		ADD_ICON(14, 5, L"bootsRuby")
 
 		// Special cases
 		ClockTexture *dataClock = new ClockTexture();

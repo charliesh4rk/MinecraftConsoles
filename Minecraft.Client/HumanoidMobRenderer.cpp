@@ -10,7 +10,7 @@
 #include "..\Minecraft.World\net.minecraft.world.entity.monster.h"
 #include "..\Minecraft.World\net.minecraft.h"
 
-const wstring HumanoidMobRenderer::MATERIAL_NAMES[5] = { L"cloth", L"chain", L"iron", L"diamond", L"gold" };
+const wstring HumanoidMobRenderer::MATERIAL_NAMES[6] = { L"cloth", L"chain", L"iron", L"diamond", L"gold", L"ruby"};
 std::map<wstring, ResourceLocation> HumanoidMobRenderer::ARMOR_LOCATION_CACHE;
 
 void HumanoidMobRenderer::_init(HumanoidModel *humanoidModel, float scale)

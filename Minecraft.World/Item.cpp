@@ -28,6 +28,8 @@ const _Tier *_Tier::IRON = new _Tier(2, 250, 6, 2, 14); //
 const _Tier *_Tier::DIAMOND = new _Tier(3, 1561, 8, 3, 10); //
 const _Tier *_Tier::GOLD = new _Tier(0, 32, 12, 0, 22);
 
+const _Tier* _Tier::RUBY = new _Tier(4, 2000, 10, 4, 12); // I kind of have no idea what these ints mean 
+
 Random *Item::random = new Random();
 
 ItemArray Item::items = ItemArray( ITEM_NUM_COUNT );
@@ -255,6 +257,19 @@ Item *Item::nameTag = NULL;
 //Item* Item::myItem = NULL;
 Item* Item::mutton_raw = NULL;
 Item* Item::mutton_cooked = NULL;
+
+/* Ruby */
+Item* Item::ruby = NULL;
+
+Item* Item::rubySword = NULL;
+Item* Item::rubyShovel = NULL;
+Item* Item::rubyPickaxe = NULL;
+Item* Item::rubyAxe = NULL;
+
+Item* Item::rubyHelmet = NULL;
+Item* Item::rubyChestplate = NULL;
+Item* Item::rubyLeggings = NULL;
+Item* Item::rubyBoots = NULL;
 
 
 void Item::staticCtor()
@@ -499,12 +514,6 @@ void Item::staticCtor()
 	Item::horseArmorDiamond = (new Item(163))														->setIconName(L"diamond_horse_armor")->setMaxStackSize(1)->setDescriptionId(IDS_ITEM_DIAMOND_HORSE_ARMOR)->setUseDescriptionId(IDS_DESC_DIAMOND_HORSE_ARMOR);
 	Item::lead = (new LeashItem(164))																->setBaseItemTypeAndMaterial(eBaseItemType_pockettool,	eMaterial_undefined)->setIconName(L"lead")->setDescriptionId(IDS_ITEM_LEAD)->setUseDescriptionId(IDS_DESC_LEAD);
 	Item::nameTag = (new NameTagItem(165))															->setIconName(L"name_tag")->setDescriptionId(IDS_ITEM_NAME_TAG)->setUseDescriptionId(IDS_DESC_NAME_TAG);
-	
-	/*Item::myItem = (new Item(24))
-		->setIconName(L"raw_mutton")
-		->handEquipped()
-		->setDescriptionId(IDS_ITEM_MY_ITEM)
-		->setUseDescriptionId(IDS_DESC_MY_ITEM);*/
 
 	Item::mutton_raw = (new FoodItem(Item::raw_mutton_Id - 256, 3, FoodConstants::FOOD_SATURATION_LOW, true))
 		->setIconName(L"muttonRaw")
@@ -515,6 +524,45 @@ void Item::staticCtor()
 		->setIconName(L"muttonCooked")
 		->setDescriptionId(IDS_ITEM_MUTTON_COOKED)
 		->setUseDescriptionId(IDS_DESC_MUTTON_COOKED);
+
+	// Ruby Stuff
+
+	Item::ruby = (new Item(Item::ruby_Id - 256))
+		->setBaseItemTypeAndMaterial(eBaseItemType_treasure, eMaterial_ruby)
+		->setIconName(L"ruby")
+		->setDescriptionId(IDS_ITEM_RUBY)
+		->setUseDescriptionId(IDS_DESC_RUBY);
+
+	Item::rubyHelmet = (ArmorItem*)((new ArmorItem(Item::rubyHelmet_Id - 256, ArmorItem::ArmorMaterial::RUBY, 5, ArmorItem::SLOT_HEAD))
+		->setBaseItemTypeAndMaterial(eBaseItemType_helmet, eMaterial_ruby)
+		->setIconName(L"helmetRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_HELMET)
+		->setUseDescriptionId(IDS_DESC_RUBY_HELMET));
+	
+	Item::rubyChestplate = (ArmorItem*)((new ArmorItem(Item::rubyChestplate_Id - 256, ArmorItem::ArmorMaterial::RUBY, 5, ArmorItem::SLOT_TORSO))
+		->setBaseItemTypeAndMaterial(eBaseItemType_chestplate, eMaterial_ruby)
+		->setIconName(L"chestplateRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_CHESTPLATE)
+		->setUseDescriptionId(IDS_DESC_RUBY_CHESTPLATE));
+
+	Item::rubyLeggings = (ArmorItem*)((new ArmorItem(Item::rubyLeggings_Id - 256, ArmorItem::ArmorMaterial::RUBY, 5, ArmorItem::SLOT_LEGS))
+		->setBaseItemTypeAndMaterial(eBaseItemType_leggings, eMaterial_ruby)
+		->setIconName(L"leggingsRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_LEGGINGS)
+		->setUseDescriptionId(IDS_DESC_RUBY_LEGGINGS));
+
+	Item::rubyBoots = (ArmorItem*)((new ArmorItem(Item::rubyBoots_Id - 256, ArmorItem::ArmorMaterial::RUBY, 5, ArmorItem::SLOT_FEET))
+		->setBaseItemTypeAndMaterial(eBaseItemType_boots, eMaterial_ruby)
+		->setIconName(L"bootsRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_BOOTS)
+		->setUseDescriptionId(IDS_DESC_RUBY_BOOTS));
+
+	Item::rubySword = (new WeaponItem(Item::rubySword_Id - 256, _Tier::RUBY))
+		->setBaseItemTypeAndMaterial(eBaseItemType_sword, eMaterial_ruby)
+		->setIconName(L"swordDiamond")
+		->setDescriptionId(IDS_ITEM_RUBY_SWORD)
+		->setUseDescriptionId(IDS_DESC_SWORD);
+
 }
 
 

@@ -771,24 +771,28 @@ Item *Mob::getEquipmentForSlot(int slot, int type)
 		if (type == 2) return Item::helmet_chain;
 		if (type == 3) return Item::helmet_iron;
 		if (type == 4) return Item::helmet_diamond;
+		if (type == 5) return Item::rubyHelmet;
 	case SLOT_CHEST:
 		if (type == 0) return Item::chestplate_leather;
 		if (type == 1) return Item::chestplate_gold;
 		if (type == 2) return Item::chestplate_chain;
 		if (type == 3) return Item::chestplate_iron;
 		if (type == 4) return Item::chestplate_diamond;
+		if (type == 5) return Item::rubyChestplate;
 	case SLOT_LEGGINGS:
 		if (type == 0) return Item::leggings_leather;
 		if (type == 1) return Item::leggings_gold;
 		if (type == 2) return Item::leggings_chain;
 		if (type == 3) return Item::leggings_iron;
 		if (type == 4) return Item::leggings_diamond;
+		if (type == 5) return Item::rubyLeggings;
 	case SLOT_BOOTS:
 		if (type == 0) return Item::boots_leather;
 		if (type == 1) return Item::boots_gold;
 		if (type == 2) return Item::boots_chain;
 		if (type == 3) return Item::boots_iron;
 		if (type == 4) return Item::boots_diamond;
+		if (type == 5) return Item::rubyBoots;
 	}
 
 	return NULL;
