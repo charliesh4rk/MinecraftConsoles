@@ -2460,6 +2460,7 @@ FoodData *Player::getFoodData()
 
 bool Player::canEat(bool magicalItem)
 {
+	if (getPlayerGamePrivilege(ePlayerGamePrivilege_CreativeMode)) return true;
 	return (magicalItem || foodData.needsFood()) && !abilities.invulnerable && !hasInvulnerablePrivilege();
 }
 

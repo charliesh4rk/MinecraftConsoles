@@ -110,6 +110,20 @@ void Sheep::dropDeathLoot(bool wasKilledByPlayer, int playerBonusLevel)
 		// killing a non-sheared sheep will drop a single block of cloth
 		spawnAtLocation(shared_ptr<ItemInstance>( new ItemInstance(Tile::wool_Id, 1, getColor()) ), 0.0f);
 	}
+
+	// and some meat
+	int count = random->nextInt(3) + 1 + random->nextInt(1 + playerBonusLevel);
+	for (int i = 0; i < count; i++)
+	{
+		if (isOnFire())
+		{
+			spawnAtLocation(Item::cooked_mutton_Id, 1);
+		}
+		else
+		{
+			spawnAtLocation(Item::raw_mutton_Id, 1);
+		}
+	}
 }
 
 int Sheep::getDeathLoot()

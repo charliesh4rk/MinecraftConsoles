@@ -412,6 +412,10 @@ public:
 	static Item *lead;
 	static Item *nameTag;
 
+	/* Modded */
+	//static Item* myItem;
+	static Item* mutton_raw;
+	static Item* mutton_cooked;
 
 	static const int shovel_iron_Id			= 256;
 	static const int pickAxe_iron_Id		= 257;
@@ -617,6 +621,12 @@ public:
 	static const int horseArmorDiamond_Id = 419;
 	static const int lead_Id = 420;
 	static const int nameTag_Id = 421;
+
+	/* Modded */
+	/* Must be greater than 1924 */
+	//static const int myItem_Id = 1925;
+	static const int raw_mutton_Id = 1925;
+	static const int cooked_mutton_Id = 1926;
 
 public:
 	const int id;

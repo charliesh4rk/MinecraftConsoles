@@ -34,6 +34,8 @@ FurnaceRecipes::FurnaceRecipes()
 	addFurnaceRecipy(Item::potato_Id, new ItemInstance(Item::potatoBaked), .35f);
 	addFurnaceRecipy(Tile::netherRack_Id, new ItemInstance(Item::netherbrick), .1f);
 
+	addFurnaceRecipy(Item::raw_mutton_Id, new ItemInstance(Item::mutton_cooked), .35f);
+
 	// special silk touch related recipes:
 	addFurnaceRecipy(Tile::coalOre_Id, new ItemInstance(Item::coal), .1f);
 	addFurnaceRecipy(Tile::redStoneOre_Id, new ItemInstance(Item::redStone), .7f);
