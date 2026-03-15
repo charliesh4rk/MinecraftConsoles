@@ -34,6 +34,9 @@ public:
 		e_MobEffectIcon_HealthBoost,
 		e_MobEffectIcon_Absorption,
 
+		e_MobEffectIcon_Cold,
+		e_MobEffectIcon_BreakArmor,
+
 		e_MobEffectIcon_COUNT,
 	};
 
@@ -64,8 +67,8 @@ public:
 	static MobEffect *healthBoost;
 	static MobEffect *absorption;
 	static MobEffect *saturation;
-	static MobEffect *reserved_24;
-	static MobEffect *reserved_25;
+	static MobEffect *cold;
+	static MobEffect *breakArmor;
 	static MobEffect *reserved_26;
 	static MobEffect *reserved_27;
 	static MobEffect *reserved_28;

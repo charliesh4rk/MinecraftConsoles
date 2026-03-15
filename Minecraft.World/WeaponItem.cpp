@@ -5,6 +5,8 @@
 #include "net.minecraft.world.entity.player.h"
 #include "net.minecraft.world.entity.monster.h"
 #include "net.minecraft.world.level.tile.h"
+#include "MobEffectInstance.h"
+#include "MobEffect.h"
 #include "WeaponItem.h"
 
 WeaponItem::WeaponItem(int id, const Tier *tier) : Item(id), tier( tier )
@@ -40,6 +42,9 @@ float WeaponItem::getDestroySpeed(shared_ptr<ItemInstance> itemInstance, Tile *t
 bool WeaponItem::hurtEnemy(shared_ptr<ItemInstance> itemInstance, shared_ptr<LivingEntity> mob, shared_ptr<LivingEntity> attacker) 
 {
 	itemInstance->hurtAndBreak(1, attacker);
+	if (tier == Tier::RUBY) {
+		mob->addEffect(new MobEffectInstance(MobEffect::breakArmor->id, 6 * SharedConstants::TICKS_PER_SECOND));
+	}
 	return true;
 }
 

@@ -33,6 +33,8 @@ enum eMODIFIER_ID
 	eModifierId_POTION_MOVESLOWDOWN,
 	eModifierId_POTION_WEAKNESS,
 
+	eModifierId_POTION_ARMOR,
+
 	eModifierId_COUNT,
 };
 

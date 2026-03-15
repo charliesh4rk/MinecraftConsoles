@@ -425,6 +425,7 @@ public:
 	static Item* rubyShovel;
 	static Item* rubyPickaxe;
 	static Item* rubyAxe;
+	static Item* rubyHoe;
 
 	static Item* rubyHelmet;
 	static Item* rubyChestplate;
@@ -649,6 +650,7 @@ public:
 	static const int rubyShovel_Id = 2001;
 	static const int rubyPickaxe_Id = 2002;
 	static const int rubyAxe_Id = 2003;
+	static const int rubyHoe_Id = 2008;
 
 	static const int rubyHelmet_Id = 2004;
 	static const int rubyChestplate_Id = 2005;

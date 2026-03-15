@@ -28,7 +28,8 @@ const _Tier *_Tier::IRON = new _Tier(2, 250, 6, 2, 14); //
 const _Tier *_Tier::DIAMOND = new _Tier(3, 1561, 8, 3, 10); //
 const _Tier *_Tier::GOLD = new _Tier(0, 32, 12, 0, 22);
 
-const _Tier* _Tier::RUBY = new _Tier(4, 2000, 10, 4, 12); // I kind of have no idea what these ints mean 
+// level, uses, speed, damage, enchantmentValue
+const _Tier* _Tier::RUBY = new _Tier(4, 2002, 10, 3, 11);
 
 Random *Item::random = new Random();
 
@@ -265,6 +266,7 @@ Item* Item::rubySword = NULL;
 Item* Item::rubyShovel = NULL;
 Item* Item::rubyPickaxe = NULL;
 Item* Item::rubyAxe = NULL;
+Item* Item::rubyHoe = NULL;
 
 Item* Item::rubyHelmet = NULL;
 Item* Item::rubyChestplate = NULL;
@@ -559,9 +561,33 @@ void Item::staticCtor()
 
 	Item::rubySword = (new WeaponItem(Item::rubySword_Id - 256, _Tier::RUBY))
 		->setBaseItemTypeAndMaterial(eBaseItemType_sword, eMaterial_ruby)
-		->setIconName(L"swordDiamond")
+		->setIconName(L"swordRuby")
 		->setDescriptionId(IDS_ITEM_RUBY_SWORD)
 		->setUseDescriptionId(IDS_DESC_SWORD);
+
+	Item::rubyShovel = (new ShovelItem(Item::rubyShovel_Id - 256, _Tier::RUBY))
+		->setBaseItemTypeAndMaterial(eBaseItemType_shovel, eMaterial_ruby)
+		->setIconName(L"shovelRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_SHOVEL)
+		->setUseDescriptionId(IDS_DESC_SHOVEL);
+
+	Item::rubyPickaxe = (new PickaxeItem(Item::rubyPickaxe_Id - 256, _Tier::RUBY))
+		->setBaseItemTypeAndMaterial(eBaseItemType_pickaxe, eMaterial_ruby)
+		->setIconName(L"pickaxeRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_PICKAXE)
+		->setUseDescriptionId(IDS_DESC_PICKAXE);
+	
+	Item::rubyAxe = (new HatchetItem(Item::rubyAxe_Id - 256, _Tier::RUBY))
+		->setBaseItemTypeAndMaterial(eBaseItemType_hatchet, eMaterial_ruby)
+		->setIconName(L"axeRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_AXE)
+		->setUseDescriptionId(IDS_DESC_HATCHET);
+
+	Item::rubyHoe = (new HoeItem(Item::rubyHoe_Id - 256, _Tier::RUBY))
+		->setBaseItemTypeAndMaterial(eBaseItemType_hoe, eMaterial_ruby)
+		->setIconName(L"hoeRuby")
+		->setDescriptionId(IDS_ITEM_RUBY_HOE)
+		->setUseDescriptionId(IDS_DESC_HOE);
 
 }
 

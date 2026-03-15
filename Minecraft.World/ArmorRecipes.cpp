@@ -72,6 +72,13 @@ void ArmorRecipes::_init()
 	ADD_OBJECT(map[4],Item::boots_iron);
 	ADD_OBJECT(map[4],Item::boots_diamond);
 	ADD_OBJECT(map[4],Item::boots_gold);
+
+	ADD_OBJECT(map[0], Item::ruby);
+
+	ADD_OBJECT(map[1], Item::rubyHelmet);
+	ADD_OBJECT(map[2], Item::rubyChestplate);
+	ADD_OBJECT(map[3], Item::rubyLeggings);
+	ADD_OBJECT(map[4], Item::rubyBoots);
 }
 
 // 4J-PB added for quick equip in the inventory
@@ -84,6 +91,7 @@ ArmorRecipes::_eArmorType ArmorRecipes::GetArmorType(int iId)
 	case Item::helmet_iron_Id:		
 	case Item::helmet_diamond_Id:						
 	case Item::helmet_gold_Id:	
+	case Item::rubyHelmet_Id:
 		return eArmorType_Helmet;
 		break;
 
@@ -92,6 +100,7 @@ ArmorRecipes::_eArmorType ArmorRecipes::GetArmorType(int iId)
 	case Item::chestplate_iron_Id:	
 	case Item::chestplate_diamond_Id:
 	case Item::chestplate_gold_Id:
+	case Item::rubyChestplate_Id:
 		return eArmorType_Chestplate;
 		break;
 
@@ -100,6 +109,7 @@ ArmorRecipes::_eArmorType ArmorRecipes::GetArmorType(int iId)
 	case Item::leggings_iron_Id:
 	case Item::leggings_diamond_Id:
 	case Item::leggings_gold_Id:
+	case Item::rubyLeggings_Id:
 		return eArmorType_Leggings;
 		break;
 
@@ -108,6 +118,7 @@ ArmorRecipes::_eArmorType ArmorRecipes::GetArmorType(int iId)
 	case Item::boots_iron_Id:
 	case Item::boots_diamond_Id:
 	case Item::boots_gold_Id:
+	case Item::rubyBoots_Id:
 		return eArmorType_Boots;
 		break;
 	}

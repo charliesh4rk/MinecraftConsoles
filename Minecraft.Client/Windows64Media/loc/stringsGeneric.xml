@@ -8856,6 +8856,10 @@ All Ender Chests in a world are linked. Items placed into an Ender Chest are acc
 		<value>Ruby Axe</value>
 	</data>
 
+	<data name="IDS_ITEM_RUBY_HOE">
+		<value>Ruby Hoe</value>
+	</data>
+
 	<!-- Ruby Armor -->
 	
 	<data name="IDS_ITEM_RUBY_HELMET">
@@ -8888,5 +8892,29 @@ All Ender Chests in a world are linked. Items placed into an Ender Chest are acc
 
 	<data name="IDS_DESC_RUBY_BOOTS">
 		<value></value>
+	</data>
+
+	<data name="IDS_TILE_RUBYBLOCK">
+		<value>Ruby Block</value>
+	</data>
+
+	<data name="IDS_DESC_RUBYBLOCK">
+		<value>A compacted form of rubies.</value>
+	</data>
+
+	<data name="IDS_TILE_RUBYORE">
+		<value>Ruby Ore</value>
+	</data>
+
+	<data name="IDS_DESC_RUBYORE">
+		<value>Destroying this block yields rubies.</value>
+	</data>
+
+	<data name="IDS_POTION_BREAKARMOR">
+		<value>Armor Break</value>
+	</data>
+
+	<data name="IDS_POTION_BREAKARMOR_POSTFIX">
+		<value>of Armor Break</value>
 	</data>
 </root>

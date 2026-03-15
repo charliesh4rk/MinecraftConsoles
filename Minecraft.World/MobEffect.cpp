@@ -35,8 +35,8 @@ MobEffect *MobEffect::wither;
 MobEffect *MobEffect::healthBoost;
 MobEffect *MobEffect::absorption;
 MobEffect *MobEffect::saturation;
-MobEffect *MobEffect::reserved_24;
-MobEffect *MobEffect::reserved_25;
+MobEffect *MobEffect::cold;
+MobEffect *MobEffect::breakArmor;
 MobEffect *MobEffect::reserved_26;
 MobEffect *MobEffect::reserved_27;
 MobEffect *MobEffect::reserved_28;
@@ -70,8 +70,13 @@ void MobEffect::staticCtor()
 	healthBoost =		(new HealthBoostMobEffect(21, false, eMinecraftColour_Effect_HealthBoost))	->setDescriptionId(IDS_POTION_HEALTHBOOST)		->setPostfixDescriptionId(IDS_POTION_HEALTHBOOST_POSTFIX)->setIcon(MobEffect::e_MobEffectIcon_HealthBoost)->addAttributeModifier(SharedMonsterAttributes::MAX_HEALTH, eModifierId_POTION_HEALTHBOOST, 4, AttributeModifier::OPERATION_ADDITION);
 	absorption =		(new AbsoptionMobEffect(22, false, eMinecraftColour_Effect_Absoprtion))		->setDescriptionId(IDS_POTION_ABSORPTION)		->setPostfixDescriptionId(IDS_POTION_ABSORPTION_POSTFIX)->setIcon(MobEffect::e_MobEffectIcon_Absorption);
 	saturation =		(new InstantenousMobEffect(23, false, eMinecraftColour_Effect_Saturation))	->setDescriptionId(IDS_POTION_SATURATION)		->setPostfixDescriptionId(IDS_POTION_SATURATION_POSTFIX);
-	reserved_24 = NULL;
-	reserved_25 = NULL;
+		
+	cold = NULL;
+	breakArmor = (new MobEffect(25, true, eMinecraftColour_Effect_MovementSlowDown))
+		->setDescriptionId(IDS_POTION_BREAKARMOR)
+		->setPostfixDescriptionId(IDS_POTION_BREAKARMOR_POSTFIX)
+		->setIcon(MobEffect::e_MobEffectIcon_BreakArmor);	
+
 	reserved_26 = NULL;
 	reserved_27 = NULL;
 	reserved_28 = NULL;

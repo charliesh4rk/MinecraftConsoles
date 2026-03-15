@@ -993,7 +993,6 @@ Recipes::Recipes()
 		L'D', Item::dye_powder, L'C', Item::fireworksCharge,
 		L'D');
 
-
 	// Sort so the largest recipes get checked first!
 	/* 4J-PB - TODO
 	Collections.sort(recipies, new Comparator<Recipy>()

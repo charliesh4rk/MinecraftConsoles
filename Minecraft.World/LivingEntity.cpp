@@ -1067,7 +1067,13 @@ float LivingEntity::getDamageAfterArmorAbsorb(DamageSource *damageSource, float 
 {
 	if (!damageSource->isBypassArmor())
 	{
-		int absorb = 25 - getArmorValue();
+		int armor = getArmorValue();
+		
+		if (getEffect(MobEffect::breakArmor)) {
+			armor = armor / 2;
+		}
+
+		int absorb = 25 - armor;
 		float v = (damage) * absorb;
 		hurtArmor(damage);
 		damage = v / 25;

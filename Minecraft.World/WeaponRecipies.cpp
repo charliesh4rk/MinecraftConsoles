@@ -23,12 +23,14 @@ void WeaponRecipies::_init()
 	ADD_OBJECT(map[0],Item::ironIngot);
 	ADD_OBJECT(map[0],Item::diamond);
 	ADD_OBJECT(map[0],Item::goldIngot);
+	ADD_OBJECT(map[0], Item::ruby);
 
 	ADD_OBJECT(map[1],Item::sword_wood);
 	ADD_OBJECT(map[1],Item::sword_stone);
 	ADD_OBJECT(map[1],Item::sword_iron);
 	ADD_OBJECT(map[1],Item::sword_diamond);
 	ADD_OBJECT(map[1],Item::sword_gold);
+	ADD_OBJECT(map[1], Item::rubySword);
 }
 
 void WeaponRecipies::addRecipes(Recipes *r) 

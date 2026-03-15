@@ -63,7 +63,7 @@ const int _ArmorMaterial::chainArray[] = {2, 5, 4, 1};
 const int _ArmorMaterial::ironArray[] = {2, 6, 5, 2};
 const int _ArmorMaterial::goldArray[] = {2, 5, 3, 1};
 const int _ArmorMaterial::diamondArray[] = {3, 8, 6, 3};
-const int _ArmorMaterial::rubyArray[] = { 4, 10, 8, 4 };
+const int _ArmorMaterial::rubyArray[] = { 3, 9, 7, 3 };
 
 const _ArmorMaterial *_ArmorMaterial::CLOTH = new _ArmorMaterial(5, _ArmorMaterial::clothArray, 15);
 const _ArmorMaterial *_ArmorMaterial::CHAIN = new _ArmorMaterial(15, _ArmorMaterial::chainArray, 12);

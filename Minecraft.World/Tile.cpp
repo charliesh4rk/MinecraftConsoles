@@ -220,6 +220,9 @@ Tile *Tile::woolCarpet = NULL;
 Tile *Tile::clayHardened = NULL;
 Tile *Tile::coalBlock = NULL;
 
+Tile* Tile::rubyOre = NULL;
+Tile* Tile::rubyBlock = NULL;
+
 DWORD Tile::tlsIdxShape = TlsAlloc();
 
 Tile::ThreadStorage::ThreadStorage()
@@ -471,6 +474,24 @@ void Tile::staticCtor()
 	Item::items[pistonStickyBase_Id]	= ( new PistonTileItem(Tile::pistonStickyBase_Id - 256) )->setDescriptionId(IDS_TILE_PISTON_STICK_BASE)->setUseDescriptionId(IDS_DESC_STICKY_PISTON);
 	Item::items[cobbleWall_Id]			= ( new MultiTextureTileItem(cobbleWall_Id - 256, cobbleWall, (int *)WallTile::COBBLE_NAMES, 2) )->setDescriptionId(IDS_TILE_COBBLESTONE_WALL)->setUseDescriptionId(IDS_DESC_COBBLESTONE_WALL);
 	Item::items[anvil_Id]				= ( new AnvilTileItem(anvil) )->setDescriptionId(IDS_TILE_ANVIL)->setUseDescriptionId(IDS_DESC_ANVIL);
+
+	Tile::rubyOre = (new OreTile(rubyOre_Id))
+		->setDestroyTime(4.0f)
+		->setExplodeable(8)
+		->setSoundType(SOUND_STONE)
+		->setIconName(L"ruby_ore")
+		->setDescriptionId(IDS_TILE_RUBYORE)
+		->setUseDescriptionId(IDS_DESC_RUBYORE);
+
+
+	Tile::rubyBlock = (new MetalTile(rubyBlock_Id))
+		->setBaseItemTypeAndMaterial(Item::eBaseItemType_block, Item::eMaterial_ruby)
+		->setDestroyTime(8.0f)
+		->setExplodeable(15)
+		->setSoundType(SOUND_METAL)
+		->setIconName(L"ruby_block")
+		->setDescriptionId(IDS_TILE_RUBYBLOCK)
+		->setUseDescriptionId(IDS_DESC_RUBYBLOCK);
 
 
 	for (int i = 0; i < 256; i++)

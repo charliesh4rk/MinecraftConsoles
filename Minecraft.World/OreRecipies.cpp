@@ -31,6 +31,9 @@ void OreRecipies::_init()
 
 	ADD_OBJECT(map[7],Tile::hayBlock);
 	ADD_OBJECT(map[7],new ItemInstance(Item::wheat, 9));
+
+	ADD_OBJECT(map[2], Tile::rubyBlock);
+	ADD_OBJECT(map[2], new ItemInstance(Item::ruby, 9));
 }
 void OreRecipies::addRecipes(Recipes *r) 
 {

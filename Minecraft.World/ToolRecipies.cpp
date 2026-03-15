@@ -58,6 +58,13 @@ void ToolRecipies::_init()
 	ADD_OBJECT(map[4],Item::hoe_iron);
 	ADD_OBJECT(map[4],Item::hoe_diamond);
 	ADD_OBJECT(map[4],Item::hoe_gold);
+
+	ADD_OBJECT(map[0], Item::ruby);
+
+	ADD_OBJECT(map[1], Item::rubyPickaxe);
+	ADD_OBJECT(map[2], Item::rubyShovel);
+	ADD_OBJECT(map[3], Item::rubyAxe);
+	ADD_OBJECT(map[4], Item::rubyHoe);
 }
 
 void ToolRecipies::addRecipes(Recipes *r) 

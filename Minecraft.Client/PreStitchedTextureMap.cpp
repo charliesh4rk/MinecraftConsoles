@@ -593,6 +593,12 @@ void PreStitchedTextureMap::loadUVs()
 		ADD_ICON(13, 5, L"leggingsRuby")
 		ADD_ICON(14, 5, L"bootsRuby")
 
+		ADD_ICON(10, 6, L"swordRuby")
+		ADD_ICON(11, 6, L"shovelRuby")
+		ADD_ICON(12, 6, L"pickaxeRuby")
+		ADD_ICON(13, 6, L"axeRuby")
+		ADD_ICON(14, 6, L"hoeRuby")
+
 		// Special cases
 		ClockTexture *dataClock = new ClockTexture();
 		Icon *oldClock = texturesByName[L"clock"];
@@ -994,5 +1000,8 @@ void PreStitchedTextureMap::loadUVs()
 		ADD_ICON(19,	13,	L"glass_pane_top_silver");
 		ADD_ICON(19,	14,	L"glass_pane_top_white");
 		ADD_ICON(19,	15,	L"glass_pane_top_yellow");
+
+		ADD_ICON(20, 0, L"ruby_block");
+		ADD_ICON(20, 1, L"ruby_ore");
 	}
 }

@@ -47,6 +47,7 @@ protected:
 	Feature *reedsFeature;
 	Feature *cactusFeature;
 	Feature *waterlilyFeature;
+	Feature* rubyOreFeature;
 
 	int waterlilyCount;
 	int treeCount;

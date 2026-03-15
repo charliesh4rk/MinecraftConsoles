@@ -62,6 +62,8 @@ void BiomeDecorator::_init()
 	cactusFeature = new CactusFeature();
 	waterlilyFeature = new WaterlilyFeature();
 
+	rubyOreFeature = new OreFeature(Tile::rubyOre_Id, 6);
+
 	waterlilyCount = 0;
 	treeCount = 0;
 	flowerCount = 2;
@@ -323,6 +325,7 @@ void BiomeDecorator::decorateOres()
 	decorateDepthSpan(2, goldOreFeature, 0, Level::genDepth / 4);
 	decorateDepthSpan(8, redStoneOreFeature, 0, Level::genDepth / 8);
 	decorateDepthSpan(1, diamondOreFeature, 0, Level::genDepth / 8);
+	decorateDepthSpan(2, rubyOreFeature, 0, Level::genDepth / 8); // rue bee
 	decorateDepthAverage(1, lapisOreFeature, Level::genDepth / 8, Level::genDepth / 8);
 	level->setInstaTick(false);
 }
