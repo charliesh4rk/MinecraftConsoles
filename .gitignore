@@ -414,3 +414,9 @@ build/
 tmp*/
 _server_asset_probe/
 server-data/
+Minecraft.World/x64_Release/Minecraft.World.vcxproj.FileListAbsolute.txt
+Minecraft.World/x64_Release/Minecraft.World.lib.recipe
+Minecraft.World/x64_Release/Minecraft.World.lib
+Minecraft.World/x64_Debug/Minecraft.World.vcxproj.FileListAbsolute.txt
+Minecraft.World/x64_Debug/Minecraft.World.lib.recipe
+Minecraft.World/x64_Debug/Minecraft.World.lib
