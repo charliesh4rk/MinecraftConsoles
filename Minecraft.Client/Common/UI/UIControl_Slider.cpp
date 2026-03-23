@@ -66,12 +66,44 @@ void UIControl_Slider::init(UIString label, int id, int min, int max, int curren
 #endif
 }
 
+bool IsUsingKeyboardMouse()
+{
+#ifdef _WINDOWS64
+
+    if (g_KBMInput.IsKBMActive()) return true;
+
+    return g_KBMInput.HasAnyInput();
+#else
+    return false;
+#endif
+}
+
 void UIControl_Slider::handleSliderMove(int newValue)
 {
 	if (m_current!=newValue)
 	{
-		ui.PlayUISFX(eSFX_Scroll);
-		m_current = newValue;
+		int valueCount = 1;
+		if (!m_allPossibleLabels.empty()) {
+			valueCount = static_cast<int>(m_allPossibleLabels.size());
+		}
+		else {
+			long long range = static_cast<long long>(m_max) - static_cast<long long>(m_min) + 1;
+			if (range <= 0) range = 1;
+			valueCount = static_cast<int>(range);
+		}
+
+		if (IsUsingKeyboardMouse() == true) {
+            if (newValue % 10 == 0) {
+                ui.PlayUISFX(eSFX_Scroll);
+                m_current = newValue;
+			} else if (valueCount <= 20) {
+				ui.PlayUISFX(eSFX_Scroll);
+				m_current = newValue;
+			}
+		} else {
+			ui.PlayUISFX(eSFX_Scroll);
+			m_current = newValue;
+		}
 
 		if(newValue < m_allPossibleLabels.size())
 		{
@@ -92,12 +124,12 @@ void UIControl_Slider::SetSliderTouchPos(float fTouchPos)
 S32 UIControl_Slider::GetRealWidth()
 {
 	IggyDataValue result;
-	IggyResult out = IggyPlayerCallMethodRS ( m_parentScene->getMovie() , &result, getIggyValuePath() , m_funcGetRealWidth , 0 , NULL );
+	IggyResult out = IggyPlayerCallMethodRS ( m_parentScene->getMovie() , &result, getIggyValuePath() , m_funcGetRealWidth , 0 , nullptr );
 
 	S32 iRealWidth = m_width;
 	if(result.type == IGGY_DATATYPE_number)
 	{
-		iRealWidth = (S32)result.number;
+		iRealWidth = static_cast<S32>(result.number);
 	}
 	return iRealWidth;
 }

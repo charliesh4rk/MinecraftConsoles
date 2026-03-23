@@ -481,14 +481,6 @@ SCreditTextItemDef UIScene_Credits::gs_aCreditDefs[MAX_CREDIT_STRINGS] =
 #else
 	{ L"Copyright (C) 2009-2014 by RAD Game Tools, Inc.",	NO_TRANSLATED_STRING,			NO_TRANSLATED_STRING,eSmallText },	// extra blank line
 #endif
-	{ L"",													NO_TRANSLATED_STRING,			NO_TRANSLATED_STRING,eSmallText },	// extra blank line
-	{ L"",													CREDIT_ICON,					eCreditIcon_Miles,eSmallText },	// extra blank line
-	{ L"Uses Miles Sound System.",							NO_TRANSLATED_STRING,			NO_TRANSLATED_STRING,eSmallText },	// extra blank line
-#ifdef __PS3__
-	{ L"Copyright (C) 1991-2013 by RAD Game Tools, Inc.",	NO_TRANSLATED_STRING,			NO_TRANSLATED_STRING,eSmallText },	// extra blank line
-#else
-	{ L"Copyright (C) 1991-2014 by RAD Game Tools, Inc.",	NO_TRANSLATED_STRING,			NO_TRANSLATED_STRING,eSmallText },	// extra blank line
-#endif
 #ifdef __PS3__
 	{ L"",													NO_TRANSLATED_STRING,			NO_TRANSLATED_STRING,eSmallText },	// extra blank line
 	{ L"",													CREDIT_ICON,					eCreditIcon_Dolby,eSmallText },	// extra blank line
@@ -496,6 +488,24 @@ SCreditTextItemDef UIScene_Credits::gs_aCreditDefs[MAX_CREDIT_STRINGS] =
 	{ L"are trademarks of Dolby Laboratories.",				NO_TRANSLATED_STRING,			NO_TRANSLATED_STRING,eSmallText },	// extra blank line
 #endif
 #endif
+    {L"", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"MinecraftConsoles", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eExtraLargeText},
+    {L"Project Maintainers", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eLargeText},
+    {L"smartcmd", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"codeHusky", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"Patoke", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"rtm516", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"mattsumi", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"dxf", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"la", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"Thank you to our 100+ contributors on GitHub!", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eLargeText},
+    {L"github.com/smartcmd/MinecraftConsoles", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText},
+    {L"Additional Thanks", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eLargeText},
+    {L"notpies - Security Fixes", NO_TRANSLATED_STRING, NO_TRANSLATED_STRING, eSmallText}
 };
 
 UIScene_Credits::UIScene_Credits(int iPad, void *initData, UILayer *parentLayer) : UIScene(iPad, parentLayer)
@@ -593,11 +603,11 @@ void UIScene_Credits::tick()
 		}
 
 		// Set up the new text element.
-		if(pDef->m_Text!=NULL) // 4J-PB - think the RAD logo ones aren't set up yet and are coming is as null
+		if(pDef->m_Text!=nullptr) // 4J-PB - think the RAD logo ones aren't set up yet and are coming is as null
 		{
 			if ( pDef->m_iStringID[0] == CREDIT_ICON )
 			{
-				addImage((ECreditIcons)pDef->m_iStringID[1]);
+				addImage(static_cast<ECreditIcons>(pDef->m_iStringID[1]));
 			}			
 			else // using additional translated string.
 			{
@@ -670,7 +680,7 @@ void UIScene_Credits::setNextLabel(const wstring &label, ECreditTextTypes size)
 	value[0].string16 = stringVal;
 
 	value[1].type = IGGY_DATATYPE_number;
-	value[1].number = (int)size;
+	value[1].number = static_cast<int>(size);
 
 	value[2].type = IGGY_DATATYPE_boolean;
 	value[2].boolval = (m_iCurrDefIndex == (m_iNumTextDefs - 1));
@@ -684,7 +694,7 @@ void UIScene_Credits::addImage(ECreditIcons icon)
 	IggyDataValue value[2];
 
 	value[0].type = IGGY_DATATYPE_number;
-	value[0].number = (int)icon;
+	value[0].number = static_cast<int>(icon);
 
 	value[1].type = IGGY_DATATYPE_boolean;
 	value[1].boolval = (m_iCurrDefIndex == (m_iNumTextDefs - 1));

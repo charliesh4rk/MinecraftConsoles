@@ -8917,4 +8917,10 @@ All Ender Chests in a world are linked. Items placed into an Ender Chest are acc
 	<data name="IDS_POTION_BREAKARMOR_POSTFIX">
 		<value>of Armor Break</value>
 	</data>
+
+
+	</data>	
+	<data name="IDS_WINDOWS_EXIT">
+		<value>Exit Minecraft</value>
+	</data>	
 </root>

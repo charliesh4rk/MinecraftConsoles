@@ -20,7 +20,7 @@ private:
 	{
 		eControl_SavesList,
 		eControl_GamesList,
-#if defined(_XBOX_ONE) || defined(__ORBIS__)
+#if defined(_XBOX_ONE) || defined(__ORBIS__) || defined(_WINDOWS64)
 		eControl_SpaceIndicator,
 #endif
 	};
@@ -52,7 +52,7 @@ protected:
 	UIControl_SaveList m_buttonListGames;
 	UIControl_Label m_labelSavesListTitle, m_labelJoinListTitle, m_labelNoGames;
 	UIControl m_controlSavesTimer, m_controlJoinTimer;
-#if defined(_XBOX_ONE) || defined(__ORBIS__)
+#if defined(_XBOX_ONE) || defined(__ORBIS__) || defined(_WINDOWS64)
 	UIControl_SpaceIndicatorBar m_spaceIndicatorSaves;
 #endif
 
@@ -68,7 +68,7 @@ private:
 		UI_MAP_ELEMENT( m_controlSavesTimer, "SavesTimer")
 		UI_MAP_ELEMENT( m_controlJoinTimer, "JoinTimer")
 
-#if defined(_XBOX_ONE) || defined(__ORBIS__)
+#if defined(_XBOX_ONE) || defined(__ORBIS__) || defined(_WINDOWS64)
 		UI_MAP_ELEMENT( m_spaceIndicatorSaves, "SaveSizeBar")
 #endif
 	UI_END_MAP_ELEMENTS_AND_NAMES()
@@ -175,6 +175,18 @@ public:
 
 private:
 	void CheckAndJoinGame(int gameIndex);
+
+#ifdef _WINDOWS64
+	static const int ADD_SERVER_BUTTON_INDEX = 0;
+	enum eAddServerPhase { eAddServer_Idle, eAddServer_IP, eAddServer_Port, eAddServer_Name };
+	eAddServerPhase m_addServerPhase;
+	wstring m_addServerIP;
+	wstring m_addServerPort;
+	void BeginAddServer();
+	void AppendServerToFile(const wstring& ip, const wstring& port, const wstring& name);
+	static int AddServerKeyboardCallback(LPVOID lpParam, bool bRes);
+#endif
+
 #if defined(__PS3__) || defined(__PSVITA__) || defined(__ORBIS__)
 	static int MustSignInReturnedPSN(void *pParam,int iPad,C4JStorage::EMessageResult result);
 	static int PSN_SignInReturned(void *pParam,bool bContinue, int iPad);
