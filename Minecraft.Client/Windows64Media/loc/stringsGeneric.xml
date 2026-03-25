@@ -8918,8 +8918,11 @@ All Ender Chests in a world are linked. Items placed into an Ender Chest are acc
 		<value>of Armor Break</value>
 	</data>
 
+	<data name="IDS_ITEM_RECORD_MACKLESONG3">
+		<value>Music Disc - MackleSong3</value>
+	</data>
+	
 
-	</data>	
 	<data name="IDS_WINDOWS_EXIT">
 		<value>Exit Minecraft</value>
 	</data>	

@@ -372,7 +372,7 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM(Item::record_10_Id)
 		ITEM(Item::record_11_Id)
 		ITEM(Item::record_12_Id)
-
+		ITEM(Item::record_mackleSong3_Id)
 		BuildFirework(list, FireworksItem::TYPE_SMALL, DyePowderItem::LIGHT_BLUE, 1, true, false);
 		BuildFirework(list, FireworksItem::TYPE_CREEPER, DyePowderItem::GREEN, 2, false, false);
 		BuildFirework(list, FireworksItem::TYPE_MAX, DyePowderItem::RED, 2, false, false, DyePowderItem::ORANGE);

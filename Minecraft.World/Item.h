@@ -419,6 +419,8 @@ public:
 	static Item* mutton_raw;
 	static Item* mutton_cooked;
 
+	static Item* record_macklesong3;
+
 	static Item* ruby;
 
 	static Item* rubySword;
@@ -656,6 +658,8 @@ public:
 	static const int rubyChestplate_Id = 2005;
 	static const int rubyLeggings_Id = 2006;
 	static const int rubyBoots_Id = 2007;
+
+	static const int record_mackleSong3_Id = 3001;
 
 public:
 	const int id;

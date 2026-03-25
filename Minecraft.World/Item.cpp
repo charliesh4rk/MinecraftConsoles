@@ -255,23 +255,25 @@ Item *Item::lead = nullptr;
 Item *Item::nameTag = nullptr;
 
 /* Modded */
-//Item* Item::myItem = NULL;
-Item* Item::mutton_raw = NULL;
-Item* Item::mutton_cooked = NULL;
+//Item* Item::myItem = nullptr;
+Item* Item::mutton_raw = nullptr;
+Item* Item::mutton_cooked = nullptr;
 
 /* Ruby */
-Item* Item::ruby = NULL;
+Item* Item::ruby = nullptr;
 
-Item* Item::rubySword = NULL;
-Item* Item::rubyShovel = NULL;
-Item* Item::rubyPickaxe = NULL;
-Item* Item::rubyAxe = NULL;
-Item* Item::rubyHoe = NULL;
+Item* Item::rubySword = nullptr;
+Item* Item::rubyShovel = nullptr;
+Item* Item::rubyPickaxe = nullptr;
+Item* Item::rubyAxe = nullptr;
+Item* Item::rubyHoe = nullptr;
 
-Item* Item::rubyHelmet = NULL;
-Item* Item::rubyChestplate = NULL;
-Item* Item::rubyLeggings = NULL;
-Item* Item::rubyBoots = NULL;
+Item* Item::rubyHelmet = nullptr;
+Item* Item::rubyChestplate = nullptr;
+Item* Item::rubyLeggings = nullptr;
+Item* Item::rubyBoots = nullptr;
+
+Item* Item::record_macklesong3 = nullptr;
 
 
 void Item::staticCtor()
@@ -526,6 +528,11 @@ void Item::staticCtor()
 		->setIconName(L"muttonCooked")
 		->setDescriptionId(IDS_ITEM_MUTTON_COOKED)
 		->setUseDescriptionId(IDS_DESC_MUTTON_COOKED);
+
+	Item::record_macklesong3 = (new RecordingItem(Item::record_mackleSong3_Id - 256, L"macklesong3"))
+		->setIconName(L"record")
+		->setDescriptionId(IDS_ITEM_RECORD_MACKLESONG3)
+		->setUseDescriptionId(IDS_DESC_RECORD);
 
 	// Ruby Stuff
 
