@@ -1632,7 +1632,7 @@ void MinecraftServer::setFlightAllowed(bool allowFlight)
 
 bool MinecraftServer::isCommandBlockEnabled()
 {
-	return false; //settings.getBoolean("enable-command-block", false);
+	return true; //settings.getBoolean("enable-command-block", false);
 }
 
 bool MinecraftServer::isNetherEnabled()

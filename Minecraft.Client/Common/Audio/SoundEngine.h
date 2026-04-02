@@ -59,6 +59,7 @@ enum eMUSICFILES
 	eStream_CD_10,
 	eStream_CD_11,
 	eStream_CD_12,
+	eStream_CD_MackleSong3,
 	eStream_Max,
 };
 

@@ -17,6 +17,7 @@
 #include "..\Minecraft.World\net.minecraft.world.entity.player.h"
 #include "..\Minecraft.World\net.minecraft.world.level.h"
 #include "..\Minecraft.World\net.minecraft.world.h"
+#include "CustomItemConstants.h"
 
 ResourceLocation ItemInHandRenderer::ENCHANT_GLINT_LOCATION = ResourceLocation(TN__BLUR__MISC_GLINT);
 ResourceLocation ItemInHandRenderer::MAP_BACKGROUND_LOCATION = ResourceLocation(TN_MISC_MAPBG);
@@ -52,8 +53,8 @@ ItemInHandRenderer::ItemInHandRenderer(Minecraft *minecraft, bool optimisedMinim
 		for( int yp = 0; yp < 16; yp++ )
 			for( int xp = 0; xp < 16; xp++ )
 			{
-				float u = (15-xp) / 256.0f;
-				float v = (15-yp) / 256.0f;
+				float u = (15-xp) / static_cast<float>(ITEM_ATLAS_WIDTH*16);
+				float v = (15-yp) / static_cast<float>(ITEM_ATLAS_HEIGHT*16);
 				u += 0.5f / 256.0f;
 				v += 0.5f / 256.0f;
 				float x0 = xp / 16.0f;
@@ -110,8 +111,8 @@ ItemInHandRenderer::ItemInHandRenderer(Minecraft *minecraft, bool optimisedMinim
 		for( int yp = 0; yp < 16; yp++ )
 			for( int xp = 0; xp < 16; xp++ )
 			{
-				float u = (15-xp) / 256.0f;
-				float v = (15-yp) / 512.0f;
+				float u = (15-xp) / static_cast<float>(BLOCK_ATLAS_WIDTH * 16);
+				float v = (15-yp) / static_cast<float>(BLOCK_ATLAS_WIDTH * 16);
 				u += 0.5f / 256.0f;
 				v += 0.5f / 512.0f;
 				float x0 = xp / 16.0f;

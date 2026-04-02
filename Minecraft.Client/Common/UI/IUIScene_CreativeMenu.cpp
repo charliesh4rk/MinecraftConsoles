@@ -293,6 +293,7 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM(Tile::chest_trap_Id)
 		ITEM(Tile::weightedPlate_heavy_Id)
 		ITEM(Tile::weightedPlate_light_Id)
+		ITEM(Tile::commandBlock_Id)
 
 	// Transport
 	DEF(eCreativeInventory_Transport)
