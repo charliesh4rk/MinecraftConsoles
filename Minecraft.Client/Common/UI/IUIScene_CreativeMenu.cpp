@@ -13,6 +13,8 @@
 #include "..\..\..\Minecraft.World\net.minecraft.world.entity.animal.h"
 #include "..\..\..\Minecraft.World\JavaMath.h"
 
+#include "..\..\..\Minecraft.World\ItemRegistry.h"
+
 // 4J JEV - Images for each tab.
 IUIScene_CreativeMenu::TabSpec **IUIScene_CreativeMenu::specs = nullptr;
 
@@ -25,7 +27,6 @@ vector< shared_ptr<ItemInstance> > IUIScene_CreativeMenu::categoryGroups[eCreati
 void IUIScene_CreativeMenu::staticCtor()
 {
 	vector< shared_ptr<ItemInstance> > *list;
-
 
 	// Building Blocks
 	DEF(eCreativeInventory_BuildingBlocks)
